@@ -1,8 +1,19 @@
 # 自分AI 簡易版 Lv.1
-## 静岡マーケサロン配布用
 
-**作成日：2025年10月23日**
-**バージョン：1.0**
+**静岡マーケサロン配布用 | 書籍「自分AIの作り方」実践テンプレート**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![関連プロジェクト](https://img.shields.io/badge/関連-書籍プロジェクト-blue)](https://github.com/myucakhr/book-publishing-project)
+
+---
+
+## 📚 このプロジェクトについて
+
+このリポジトリは、**書籍「自分AIの作り方」（仮）のLv.1簡易版**として実装されたテンプレート集です。
+
+- **関連プロジェクト**: [book-publishing-project](https://github.com/myucakhr/book-publishing-project)
+- **書籍の位置づけ**: 第1章「自分AI Lv.1簡易版」の実装例
+- **対象読者**: マーケター、経営者、個人事業主
 
 ---
 
@@ -10,158 +21,63 @@
 
 **あなた専用のAIアシスタント**です。
 
-あなたの価値観、話し方、経験を学習して、
-メール返信、タスク整理、コンテンツ作成など、
-**あなたらしいサポート**をしてくれます。
+あなたの価値観、話し方、経験を学習して、メール返信、タスク整理、コンテンツ作成など、**あなたらしいサポート**をしてくれます。
+
+---
+
+## 🚀 クイックスタート
+
+### 1. このリポジトリをクローン
+
+```bash
+git clone https://github.com/myucakhr/jibun-ai-lv1-simple.git
+cd jibun-ai-lv1-simple
+```
+
+### 2. Google Driveにアップロード
+
+フォルダ全体をGoogle Driveにアップロードします。
+
+### 3. Gemini Gemsに設定
+
+1. [Gemini](https://gemini.google.com)を開く
+2. 「Gems」→「新規Gem作成」
+3. 以下のファイルをGoogle Driveから追加：
+   - `00_自分AI_システムプロンプト.md`
+   - `knowledge/My_Values.md`
+   - `knowledge/My_CommunicationStyle.md`
+   - `knowledge/My_Episodes.md`
+   - `modes/`配下の5ファイル
+4. Gem名を「自分AI」に設定
+5. 保存
+
+### 4. 自分の情報を記入
+
+`knowledge/`フォルダの3ファイルに、自分の情報を記入します。
 
 ---
 
 ## 📁 ファイル構成
 
 ```
-自分AI_簡易版Lv1/
+jibun-ai-lv1-simple/
 ├── 00_自分AI_システムプロンプト.md  ← AIへの指示（ルーター）
-│
 ├── knowledge/                        ← データベース層
 │   ├── My_Values.md                 ← あなたの価値観
 │   ├── My_CommunicationStyle.md     ← あなたの話し方
-│   └── My_Episodes.md               ← あなたの経験・エピソード
-│
+│   └── My_Episodes.md               ← あなたの経験
 ├── modes/                            ← 実行層（5つの専門Mode）
-│   ├── mode1_update.md              ← 日々の記録・更新
-│   ├── mode2_maintenance.md         ← メンテナンス（週次）
+│   ├── mode1_update.md              ← 日々の記録
+│   ├── mode2_maintenance.md         ← 週次メンテナンス
 │   ├── mode3_task_management.md     ← タスク整理
-│   ├── mode4_email.md               ← メール作成・返信
+│   ├── mode4_email.md               ← メール作成
 │   └── mode5_content_generation.md  ← コンテンツ生成
-│
-└── README.md                         ← このファイル
+└── README.md                         ← 使い方ガイド
 ```
 
 ---
 
-## 🚀 使い方（3ステップ）
-
-### ステップ1：Google Driveにアップロード
-1. このフォルダ全体をGoogle Driveにアップロード
-2. 「自分AI_簡易版Lv1」フォルダができます
-
----
-
-### ステップ2：Gemini Gemsに設定
-1. Geminiアプリを開く（https://gemini.google.com）
-2. 左サイドバーの「Gems」をクリック
-3. 「新規Gem作成」をクリック
-4. 以下のファイルをGoogle Driveから追加：
-   - `00_自分AI_システムプロンプト.md`
-   - `knowledge/My_Values.md`
-   - `knowledge/My_CommunicationStyle.md`
-   - `knowledge/My_Episodes.md`
-   - `modes/mode1_update.md`
-   - `modes/mode2_maintenance.md`
-   - `modes/mode3_task_management.md`
-   - `modes/mode4_email.md`
-   - `modes/mode5_content_generation.md`
-5. Gem名を「自分AI」に設定
-6. 保存
-
----
-
-### ステップ3：自分の情報を記入
-1. Google Driveで`knowledge/`フォルダを開く
-2. 以下の3ファイルに、自分の情報を記入：
-   - `My_Values.md`：あなたの価値観3つ
-   - `My_CommunicationStyle.md`：あなたの話し方の特徴3つ
-   - `My_Episodes.md`：印象的なエピソード3つ
-3. 保存すると、自動的にGeminiに反映されます
-
----
-
-## 💡 使用例
-
-### 例1：日々の記録（Mode1）
-```
-あなた：「今日はA社との打ち合わせで、
-       相手の本音を引き出すことができた。
-       傾聴って大事だな。」
-
-自分AI：「My_Episodes.mdに追加する内容を整理しました：
-        （整理された内容を提示）
-        このまま追加してよろしいですか？」
-```
-
----
-
-### 例2：タスク整理（Mode3）
-```
-あなた：「今日のタスクを整理して
-       ・提案書作成
-       ・メール返信
-       ・SNS投稿」
-
-自分AI：「My_Values.mdを参照して、優先順位を付けました：
-        （優先順位付きリスト + Googleカレンダー追加方法）」
-```
-
----
-
-### 例3：メール返信（Mode4）
-```
-あなた：「件名：〇〇の件について
-       本文：...（メール本文）
-       このメールに返信してください」
-
-自分AI：「My_CommunicationStyle.mdを参照して、
-        あなたらしいメール文を作成しました：
-        （メール全文）」
-```
-
----
-
-### 例4：コンテンツ生成（Mode5）
-```
-あなた：「タスク管理についてのX投稿を作って」
-
-自分AI：「誰に向けて、何を伝えたいですか？」
-
-あなた：「経営者向けに、価値観ベースのタスク管理の重要性」
-
-自分AI：「My_Episodes.mdから関連エピソードを引用して、
-        140文字の投稿を作成しました：
-        （投稿文）」
-```
-
----
-
-### 例5：週次メンテナンス（Mode2）
-```
-あなた：「自分AIのメンテナンスをして」
-
-自分AI：「3ファイルをレビューしました。
-        重複や冗長性をチェックして、
-        以下の改善案を提案します：
-        （Before/After）」
-```
-
----
-
-## 🔄 更新方法
-
-### 日常的な更新（Mode1を使用）
-1. 自分AI Gemを開く
-2. 「今日は〇〇があった」と入力
-3. 自分AIが整理して、追加内容を提案
-4. 承認したら、Google Driveのファイルにコピペ
-5. 保存（自動的にGeminiに反映）
-
-### 週次メンテナンス（Mode2を使用）
-1. 週末に「メンテナンスして」と入力
-2. 自分AIが重複や冗長性をチェック
-3. 改善案を確認して承認
-4. Google Driveのファイルを更新
-
----
-
-## 📚 5つのModeの使い分け
+## 💡 5つのMode
 
 | Mode | 用途 | 使用頻度 |
 |------|------|---------|
@@ -173,96 +89,89 @@
 
 ---
 
-## 🎓 よくある質問
+## 📚 関連プロジェクト
 
-### Q1. どのツールで使えますか？
-**A.** Gemini、ChatGPT、Claudeで使用可能です。
-推奨順：Gemini > ChatGPT > Claude
+### 書籍「自分AIの作り方」
 
-### Q2. ファイルを更新したら、どうすればGeminiに反映されますか？
-**A.** Gemini GemsはGoogle Driveと連携しているため、
-ファイルを保存すると自動的に最新版が反映されます。
+- **リポジトリ**: [book-publishing-project](https://github.com/myucakhr/book-publishing-project)
+- **Issue**: [#1 - 【書籍PJ】Lv.1簡易版の実装](https://github.com/myucakhr/book-publishing-project/issues/1)
 
-### Q3. スマホでも使えますか？
-**A.** はい。Geminiアプリで使用可能です。
-音声入力も活用できます。
+### レベル構成
 
-### Q4. 初回設定に時間はかかりますか？
-**A.** Google Driveへのアップロード + Gems設定で約10分。
-自分の情報記入は、まずは簡単に3つずつ書けばOKです。
-
-### Q5. どれくらいで効果が出ますか？
-**A.** 初日から使えますが、1週間使うと精度が上がります。
-毎日の記録（Mode1）を続けることで、どんどん賢くなります。
+| レベル | 内容 | リポジトリ |
+|--------|------|-----------|
+| **Lv.1** | 簡易版（本リポジトリ） | [jibun-ai-lv1-simple](https://github.com/myucakhr/jibun-ai-lv1-simple) |
+| Lv.2 | カレンダー・Gmail API連携 | 開発予定 |
+| Lv.3 | GitHub・Slack連携 | 開発予定 |
 
 ---
 
-## 🔧 トラブルシューティング
+## 🛠️ 技術スタック
 
-### ファイルがGeminiに反映されない
-- Google Driveで正しいファイルを選択しているか確認
-- ファイルを保存し直してみる
-- Gemini Gemsの設定画面で「更新」ボタンをクリック
-
-### Modeが自動判断されない
-- システムプロンプトが正しく読み込まれているか確認
-- 「〇〇して」と明示的に依頼してみる
-- 例：「Mode1で記録して」
-
-### メール返信の精度が低い
-- `My_CommunicationStyle.md`に表現を追加
-- よく使うフレーズを記録
-- 週次メンテナンス（Mode2）で整理
+- **AIツール**: Gemini Gems（推奨）、ChatGPT、Claude
+- **ストレージ**: Google Drive
+- **言語**: Markdown
+- **バージョン管理**: Git/GitHub
 
 ---
 
-## 📈 レベルアップ（今後の拡張）
+## 📝 使用例
 
-### Lv.2で実装予定
-- Googleカレンダー API連携（自動予定追加）
-- Gmail API連携（メール自動送信）
-- 人物情報管理（`People/`フォルダ）
+### 例1：日々の記録（Mode1）
 
-### Lv.3で実装予定
-- GitHub連携（タスク管理）
-- Slack連携（通知）
-- 自動週次レポート
+```
+あなた：「今日はA社との打ち合わせで、相手の本音を引き出せた」
 
----
+自分AI：「My_Episodes.mdに追加する内容を整理しました...」
+```
 
-## 🎁 セミナー参加者限定特典
+### 例2：タスク整理（Mode3）
 
-### 特典1：設定サポート
-セミナー後1週間、質問し放題
+```
+あなた：「今日のタスクを整理して
+       ・提案書作成
+       ・メール返信」
 
-### 特典2：活用事例集
-他の参加者の活用事例を共有
-
-### 特典3：アップデート通知
-Lv.2、Lv.3のリリース時に優先案内
+自分AI：「優先順位を付けました：
+        1. 提案書作成（2時間）
+        2. メール返信（30分）
+        Googleカレンダーへの追加方法：...」
+```
 
 ---
 
-## 📞 サポート
+## 🤝 コントリビューション
 
-### 困ったときは
-1. このREADMEを再確認
-2. 静岡マーケサロンのSlackで質問
-3. 宮内に直接連絡
+このプロジェクトは書籍プロジェクトの一部ですが、改善提案や機能追加のPRを歓迎します。
+
+1. このリポジトリをフォーク
+2. フィーチャーブランチを作成 (`git checkout -b feature/amazing-feature`)
+3. 変更をコミット (`git commit -m 'Add amazing feature'`)
+4. ブランチにプッシュ (`git push origin feature/amazing-feature`)
+5. プルリクエストを作成
 
 ---
 
-## 📝 更新履歴
+## 📄 ライセンス
 
-### 2025-10-23（v1.0）
-- 初版リリース
-- 5つのMode実装
-- Google Drive × Gemini Gems連携
+MIT License - 詳細は [LICENSE](LICENSE) ファイルを参照
+
+---
+
+## 👤 作成者
+
+**宮内章宏（SmartFlow）**
+
+- GitHub: [@myucakhr](https://github.com/myucakhr)
+- 関連: [書籍プロジェクト](https://github.com/myucakhr/book-publishing-project)
+
+---
+
+## 🙏 謝辞
+
+- 静岡マーケサロンの皆様
+- YELLOWコミュニティの勉強会参加者の皆様
 
 ---
 
 **自分AIを育てて、あなたらしい働き方を実現しましょう！**
-
-**作成者：宮内章宏（SmartFlow）**
-**Twitter：@あなたのTwitterID**
-**Email：あなたのメールアドレス**
