@@ -1,19 +1,8 @@
-# 自分AI 簡易版 Lv.1
+# 自分AI
 
-**静岡マーケサロン配布用 | 書籍「自分AIの作り方」実践テンプレート**
+**Google Keepで動く、あなた専用のAIアシスタント**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![関連プロジェクト](https://img.shields.io/badge/関連-書籍プロジェクト-blue)](https://github.com/myucakhr/book-publishing-project)
-
----
-
-## 📚 このプロジェクトについて
-
-このリポジトリは、**書籍「自分AIの作り方」（仮）のLv.1簡易版**として実装されたテンプレート集です。
-
-- **関連プロジェクト**: [book-publishing-project](https://github.com/myucakhr/book-publishing-project)
-- **書籍の位置づけ**: 第1章「自分AI Lv.1簡易版」の実装例
-- **対象読者**: マーケター、経営者、個人事業主
+**作成日**: 2025年10月25日
 
 ---
 
@@ -23,56 +12,56 @@
 
 あなたの価値観、話し方、経験を学習して、メール返信、タスク整理、コンテンツ作成など、**あなたらしいサポート**をしてくれます。
 
+**特徴**:
+- Google Keepで自分のデータを管理
+- Gemini Gemsでチャット操作だけで完結
+- 初回以降、Keepを触る必要なし
+
 ---
 
 ## 🚀 クイックスタート
 
-### 1. このリポジトリをクローン
+### ステップ1: Google Keepで3つのメモを作成
 
-```bash
-git clone https://github.com/myucakhr/jibun-ai-lv1-simple.git
-cd jibun-ai-lv1-simple
-```
+Google Keepを開き、以下の3つの空メモを作成してください：
 
-### 2. Google Driveにアップロード
+1. **「My_Values」**
+2. **「My_CommunicationStyle」**
+3. **「My_Episodes」**
 
-フォルダ全体をGoogle Driveにアップロードします。
+**重要**: メモ名は必ず上記の通りに（スペルミスなし）
 
-### 3. Gemini Gemsに設定
+### ステップ2: Gemini Gemsに設定
 
 1. [Gemini](https://gemini.google.com)を開く
 2. 「Gems」→「新規Gem作成」
-3. 以下のファイルをGoogle Driveから追加：
+3. 以下の7ファイルをアップロード：
    - `00_自分AI_システムプロンプト.md`
-   - `knowledge/My_Values.md`
-   - `knowledge/My_CommunicationStyle.md`
-   - `knowledge/My_Episodes.md`
-   - `modes/`配下の5ファイル
+   - `mode1_update.md`
+   - `mode2_maintenance.md`
+   - `mode3_task_management.md`
+   - `mode4_email.md`
+   - `mode5_content_generation.md`
+   - このREADME（参考用、なくてもOK）
 4. Gem名を「自分AI」に設定
 5. 保存
 
-### 4. 自分の情報を記入
+### ステップ3: 自分の情報を記入
 
-`knowledge/`フォルダの3ファイルに、自分の情報を記入します。
+Gem のチャットで「Mode1」を使って、自分の情報を記録していきます。
 
 ---
 
 ## 📁 ファイル構成
 
 ```
-jibun-ai-lv1-simple/
 ├── 00_自分AI_システムプロンプト.md  ← AIへの指示（ルーター）
-├── knowledge/                        ← データベース層
-│   ├── My_Values.md                 ← あなたの価値観
-│   ├── My_CommunicationStyle.md     ← あなたの話し方
-│   └── My_Episodes.md               ← あなたの経験
-├── modes/                            ← 実行層（5つの専門Mode）
-│   ├── mode1_update.md              ← 日々の記録
-│   ├── mode2_maintenance.md         ← 週次メンテナンス
-│   ├── mode3_task_management.md     ← タスク整理
-│   ├── mode4_email.md               ← メール作成
-│   └── mode5_content_generation.md  ← コンテンツ生成
-└── README.md                         ← 使い方ガイド
+├── mode1_update.md                ← 日々の記録
+├── mode2_maintenance.md           ← 週次メンテナンス
+├── mode3_task_management.md       ← タスク整理
+├── mode4_email.md                 ← メール作成
+├── mode5_content_generation.md    ← コンテンツ生成
+└── README.md                      ← このファイル
 ```
 
 ---
@@ -89,89 +78,189 @@ jibun-ai-lv1-simple/
 
 ---
 
-## 📚 関連プロジェクト
+## 📝 Google Keepメモの記入例
 
-### 書籍「自分AIの作り方」
+### 1. My_Values（価値観）
 
-- **リポジトリ**: [book-publishing-project](https://github.com/myucakhr/book-publishing-project)
-- **Issue**: [#1 - 【書籍PJ】Lv.1簡易版の実装](https://github.com/myucakhr/book-publishing-project/issues/1)
+```markdown
+### 本質的な解決を重視
+- **説明**：表面的な対処ではなく、根本原因を解決することを重視
+- **具体例**：クライアントから「ツールが欲しい」と言われても、業務フローの課題を先に探る
+- **行動指針**：
+  - 「なぜ？」を3回繰り返す
+  - 表面的な要望の裏にある真のニーズを探る
+  - 長期的な視点で解決策を考える
 
-### レベル構成
+### 少ない労力で最大の成果
+- **説明**：効率化を重視し、自動化できるものは積極的に自動化
+- **具体例**：メール返信を自動化して週3時間削減
+- **行動指針**：
+  - 手作業を自動化できないか常に考える
+  - ツールを活用して時間を創出
+  - 単純作業に時間をかけない
+```
 
-| レベル | 内容 | リポジトリ |
-|--------|------|-----------|
-| **Lv.1** | 簡易版（本リポジトリ） | [jibun-ai-lv1-simple](https://github.com/myucakhr/jibun-ai-lv1-simple) |
-| Lv.2 | カレンダー・Gmail API連携 | 開発予定 |
-| Lv.3 | GitHub・Slack連携 | 開発予定 |
+### 2. My_CommunicationStyle（コミュニケーションスタイル）
+
+```markdown
+### 基本スタイル
+- **特徴**：丁寧だけど堅苦しくない、親しみやすい敬語
+- **よく使う表現**：
+  - 「〜ですね」（共感を示す）
+  - 「〜かと思います」（柔らかい断定）
+  - 「引き続きよろしくお願いいたします」（締め）
+- **使用シーン**：メール、チャット、SNS投稿
+
+### 説明スタイル
+- **特徴**：結論ファーストを意識、具体例を多用
+- **よく使う表現**：
+  - 「例えば〜」（具体化）
+  - 「つまり〜」（要約）
+  - 「〇〇の観点から言うと〜」（視点の明示）
+- **使用シーン**：提案書、プレゼン資料
+```
+
+### 3. My_Episodes（エピソード）
+
+```markdown
+### 2025-10-20：傾聴で本音を引き出す
+- **状況**：新規クライアントとの初回打ち合わせ
+- **課題**：表面的な要望しか聞けない状態
+- **行動**：焦らず、じっくり話を聞く姿勢を貫いた
+- **結果**：本音の課題が見えた
+- **学び**：傾聴は信頼構築の第一歩
+
+### 2025-10-15：メール自動化で週3時間削減
+- **状況**：メール返信に週5時間かかっていた
+- **課題**：定型的なメールに時間を取られる
+- **行動**：自分AIを活用してメール作成を自動化
+- **結果**：週3時間の時間創出
+- **学び**：少ない労力で最大の成果を実現
+```
 
 ---
 
-## 🛠️ 技術スタック
-
-- **AIツール**: Gemini Gems（推奨）、ChatGPT、Claude
-- **ストレージ**: Google Drive
-- **言語**: Markdown
-- **バージョン管理**: Git/GitHub
-
----
-
-## 📝 使用例
+## 🔄 使い方の流れ
 
 ### 例1：日々の記録（Mode1）
 
 ```
 あなた：「今日はA社との打ち合わせで、相手の本音を引き出せた」
 
-自分AI：「My_Episodes.mdに追加する内容を整理しました...」
+自分AI：
+→ Google Keepの「My_Episodes」メモを更新
+→ 内容を整形して提案
+→ 承認後、自動でKeepメモを更新
 ```
 
 ### 例2：タスク整理（Mode3）
 
 ```
 あなた：「今日のタスクを整理して
-       ・提案書作成
-       ・メール返信」
+       ・A社への提案書作成
+       ・B社からのメール返信」
 
-自分AI：「優先順位を付けました：
-        1. 提案書作成（2時間）
-        2. メール返信（30分）
-        Googleカレンダーへの追加方法：...」
+自分AI：
+→ Google Keepの「My_Values」メモを参照
+→ 価値観に基づいて優先順位付け
+→ Googleカレンダーへの追加方法を提示
+```
+
+### 例3：メール返信（Mode4）
+
+```
+あなた：「このメールに返信してください
+       [メール本文をコピペ]」
+
+自分AI：
+→ Google Keepの「My_CommunicationStyle」メモを参照
+→ 自分らしいトーンでメール文を生成
 ```
 
 ---
 
-## 🤝 コントリビューション
+## ✨ 自分AIのメリット
 
-このプロジェクトは書籍プロジェクトの一部ですが、改善提案や機能追加のPRを歓迎します。
+### 1. Gemのチャットだけで完結
+- 初回以降、Google Keepを触る必要なし
+- Mode1で記録するだけで自動更新
 
-1. このリポジトリをフォーク
-2. フィーチャーブランチを作成 (`git checkout -b feature/amazing-feature`)
-3. 変更をコミット (`git commit -m 'Add amazing feature'`)
-4. ブランチにプッシュ (`git push origin feature/amazing-feature`)
-5. プルリクエストを作成
+### 2. 価値観ベースの意思決定
+- タスクの優先順位も価値観で判断
+- メール文もあなたらしいトーンで生成
 
----
-
-## 📄 ライセンス
-
-MIT License - 詳細は [LICENSE](LICENSE) ファイルを参照
+### 3. 学習し続けるAI
+- 日々の記録で賢くなる
+- エピソードが増えるほど具体的に
 
 ---
 
-## 👤 作成者
+## 📊 データ管理
 
-**宮内章宏（SmartFlow）**
+### Google Keepメモの役割
 
-- GitHub: [@myucakhr](https://github.com/myucakhr)
-- 関連: [書籍プロジェクト](https://github.com/myucakhr/book-publishing-project)
+| メモ名 | 役割 | 更新頻度 |
+|--------|------|---------|
+| My_Values | 価値観・判断基準 | 週次 |
+| My_CommunicationStyle | 話し方・文体 | 月次 |
+| My_Episodes | 体験談・事例 | 毎日 |
+
+### セキュリティ
+
+- データはすべてあなたのGoogle Keepに保存
+- 外部に流出しない
+- いつでも削除・編集可能
 
 ---
 
-## 🙏 謝辞
+## 🔧 よくある質問
 
-- 静岡マーケサロンの皆様
-- YELLOWコミュニティの勉強会参加者の皆様
+### Q1: Google Keepのメモが見つからないと言われます
+
+**A**: メモ名のスペルを確認してください。必ず以下の通りに：
+- `My_Values`
+- `My_CommunicationStyle`
+- `My_Episodes`
+
+### Q2: Mode1で更新したのに反映されません
+
+**A**: Keepメモが正しく更新されているか確認してください。メモ名を明示して更新されているはずです。
+
+### Q3: 複数のメモが作成されてしまいました
+
+**A**: 古いメモを手動で削除してください。最新のメモだけを残します。
 
 ---
 
-**自分AIを育てて、あなたらしい働き方を実現しましょう！**
+## 📚 次のステップ
+
+### 1週間の使い方
+
+**毎日（5分）**:
+- Mode1で今日の気づきを記録
+
+**毎週（30分）**:
+- Mode2でメンテナンス
+- 重複削除、整理
+
+**随時**:
+- Mode3でタスク整理
+- Mode4でメール作成
+- Mode5でコンテンツ生成
+
+---
+
+## 🙏 最後に
+
+自分AIは、あなたと一緒に成長していきます。
+
+日々の記録をコツコツ続けることで、
+あなた専用の賢いアシスタントに育っていきます。
+
+**さあ、自分AIを育てましょう！**
+
+---
+
+**作成者**: 宮内章宏（SmartFlow）
+**作成日**: 2025年10月25日
+**バージョン**: 2.0（Google Keep対応版）
